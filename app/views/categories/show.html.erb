@@ -1,0 +1,10 @@
+<ul>
+<% @category.posts.each do |post| %>
+    <li> <%= link_to post.title, post %> </li>
+    <ul>
+    <% post.comments.each do |com| %>
+    <li> <%= com.content %> </li>
+    <% end %>
+    </ul>
+<% end %>
+</ul>
