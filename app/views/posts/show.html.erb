@@ -33,7 +33,7 @@
     <%= c.collection_select :user_id, User.all, :id, :username, include_blank: "None" %><br />
 
     <%= c.label "New User:" %><br />
-    <%= c.fields_for :user, @comment.user = User.new do |u| %>
+    <%= c.fields_for :user, User.new do |u| %>
       <%= u.text_field :username %>
     <% end %> <br /><br />
 
